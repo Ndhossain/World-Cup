@@ -46,6 +46,10 @@ a {
   font-weight: 400;
 }
 
+main {
+  margin: 4em 0;
+}
+
 /*--------------------
 Header section styles
 ---------------------*/
@@ -60,19 +64,19 @@ header {
   margin-top: 3%;
 }
 
-.text,
-.image {
+.header-text,
+.header-image {
   width: 50%;
 }
 
-.text {
+.header-text {
   margin-left: 76px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.button {
+.header-button {
   padding: 16px 25px;
   background: #dd0000;
   border-radius: 5px;
@@ -80,23 +84,56 @@ header {
   color: #fff;
 }
 
-.button > span {
+.header-button > span {
   margin-right: 5px;
 }
 
-.button:hover > span {
+.header-button:hover > span {
   margin-right: 15px;
   transition: 0.3s;
 }
 
-.image {
+.header-image {
   display: flex;
   align-items: flex-end;
 }
 
-.image > img {
+.header-image > img {
   width: 90%;
   margin-top: 30px;
+}
+
+/*-------------------------
+ Main's side Navbar styles
+--------------------------*/
+.side-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 252px;
+  background: #161616;
+  padding: 30px;
+  gap: 30px;
+  border-radius: 10px;
+}
+
+.side-nav-item {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  border-radius: 10px;
+  color: #161616;
+}
+
+.side-nav-item:hover {
+  color: #fff;
+  background-color: #dd0000;
+}
+
+.active {
+  color: #fff;
+  background-color: #dd0000;
 }
 
 /*--------------------
@@ -112,6 +149,16 @@ header {
   p {
     font-size: 14px;
     line-height: 24px;
+  }
+
+  .side-navbar {
+    flex-direction: row;
+    width: 95%;
+    background-color: #fff;
+  }
+
+  .side-nav-item {
+    border: 1px solid #161616;
   }
 }
 
@@ -134,8 +181,8 @@ header {
     flex-direction: column;
   }
 
-  .text,
-  .image {
+  .header-text,
+  .header-image {
     width: 90%;
   }
 
