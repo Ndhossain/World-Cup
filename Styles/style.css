@@ -11,10 +11,13 @@
 
 body {
   box-sizing: border-box;
-  max-width: 1320px;
-  padding: 0 5%;
-  margin: 0 auto;
   font-family: "Poppins", sans-serif;
+}
+
+.width {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 0 3%;
 }
 
 h1 {
@@ -150,6 +153,7 @@ header {
   grid-template-columns: repeat(3, 1fr);
   width: calc(100% - 336px);
   grid-gap: 24px;
+  align-items: center;
 }
 
 .box {
@@ -161,18 +165,23 @@ header {
  Upcoming match page's styles
 -----------------------------*/
 .upcoming-match {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 53px 0px;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 53px 0px;
+  gap: 20px;
 }
 
 .upcoming-match-images {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.upcoming-match-images img {
+  width: calc(100% / 3);
 }
 
 /*--------------------
@@ -209,6 +218,73 @@ header {
   margin-right: 12px;
 }
 
+.tablet-view-button {
+  padding: 12px 29px;
+  background: #dd0000;
+  border-radius: 5px;
+  color: #fff;
+  width: 131px;
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+}
+
+/*---------------------
+ Footer section styles
+---------------------*/
+
+footer {
+  background: #161616;
+  color: #fff;
+  padding: 70px 0;
+}
+
+.footer-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding: 0 3%;
+}
+
+.footer-section a {
+  color: #b9b9b9;
+  font-size: 16px;
+}
+
+.footer-section hr {
+  border: none;
+  height: 1px;
+  background: #b9b9b9;
+  width: 100%;
+}
+
+.footer-navbar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.copyright-sociallink {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
 /*---------------------
  tablet device styles
 ---------------------*/
@@ -239,6 +315,10 @@ header {
   .container {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
+  }
+
+  .tablet-view-button {
+    display: block;
   }
 }
 
@@ -285,5 +365,16 @@ header {
   .container {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
+  }
+
+  .footer-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .copyright-sociallink {
+    flex-direction: column-reverse;
+    gap: 30px;
+    align-items: center;
   }
 }
