@@ -48,9 +48,11 @@ a {
 
 main {
   margin: 4em 0;
+  display: flex;
+  gap: 24px;
 }
 
-/*--------------------
+/*---------------------
 Header section styles
 ---------------------*/
 
@@ -103,7 +105,7 @@ header {
   margin-top: 30px;
 }
 
-/*-------------------------
+/*--------------------------
  Main's side Navbar styles
 --------------------------*/
 .side-navbar {
@@ -115,6 +117,7 @@ header {
   padding: 30px;
   gap: 30px;
   border-radius: 10px;
+  height: 276px;
 }
 
 .side-nav-item {
@@ -124,6 +127,7 @@ header {
   padding: 1em 0;
   border-radius: 10px;
   color: #161616;
+  border: 1px solid #161616;
 }
 
 .side-nav-item:hover {
@@ -134,9 +138,78 @@ header {
 .active {
   color: #fff;
   background-color: #dd0000;
+  border: none;
+}
+
+/*----------------------
+ Main's section styles
+----------------------*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: calc(100% - 336px);
+  grid-gap: 24px;
+}
+
+.box {
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+}
+
+/*-----------------------------
+ Upcoming match page's styles
+-----------------------------*/
+.upcoming-match {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 53px 0px;
+    gap: 20px;
+}
+
+.upcoming-match-images {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 /*--------------------
+ blog page's styles
+--------------------*/
+
+.blog-image > img {
+  width: 100%;
+}
+
+.blog-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-text > button {
+  padding: 4px 16px;
+  font-size: 16px;
+  color: #161616;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #161616;
+  width: 100px;
+}
+
+.times-with-messages {
+  display: flex;
+  gap: 34px;
+}
+
+.times-with-messages > span > i {
+  margin-right: 12px;
+}
+
+/*---------------------
  tablet device styles
 ---------------------*/
 
@@ -151,14 +224,21 @@ header {
     line-height: 24px;
   }
 
-  .side-navbar {
-    flex-direction: row;
-    width: 95%;
-    background-color: #fff;
+  main {
+    flex-direction: column;
   }
 
-  .side-nav-item {
-    border: 1px solid #161616;
+  .side-navbar {
+    flex-direction: row;
+    width: 100%;
+    background-color: #fff;
+    height: 100%;
+    padding: 30px 0;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 }
 
@@ -177,6 +257,10 @@ header {
     line-height: 24px;
   }
 
+  main {
+    flex-direction: column;
+  }
+
   header {
     flex-direction: column;
   }
@@ -186,10 +270,20 @@ header {
     width: 90%;
   }
 
-  .text {
+  .header-text {
     margin-left: 0px;
     text-align: center;
     margin-top: 30px;
     align-items: center;
+  }
+
+  .side-navbar {
+    width: calc(100% - 60px);
+    background-color: #fff;
+  }
+
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
   }
 }
