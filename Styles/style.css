@@ -113,7 +113,7 @@ header {
 --------------------*/
 
 .animate-text > span {
-  animation-name: bzAnHH;
+  animation-name: flying-letters;
   animation-duration: 6s;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-fill-mode: forwards;
@@ -153,7 +153,7 @@ header {
   animation-delay: 0.8s;
 }
 
-@keyframes bzAnHH {
+@keyframes flying-letters {
   0% {
     opacity: 0;
     transform: translateY(-100px) skewY(10deg) skewX(10deg) rotateZ(30deg);
